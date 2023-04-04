@@ -17,11 +17,10 @@ class MainActivity : AppCompatActivity() {
         } else {
             val intent = Intent()
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)      // 原方案
-            finishAndRemoveTask()                               // 原方案
             intent.setClassName("com.example.pluginapp","com.example.pluginapp.MainActivity")
             startActivity(intent)
-
             overridePendingTransition(0, 0)
+
             finishAndRemoveTask()                               // 原方案
 //        finish()                                              // 现方案
         }
